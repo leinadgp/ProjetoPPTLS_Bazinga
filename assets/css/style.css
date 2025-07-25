@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+
+    
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 35px;
+    color: #FF6600;
+    background-color: #000000;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container-master{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    gap: 35px;
+    
+}
+
+.container-player{
+    display: none;
+    flex-direction: row;
+    
+    margin-left: 25px;
+    gap: 30px;
+    transition: 2s;
+    
+}
+.container-result{
+    background-color: #000000;
+
+    border-radius: 25px;
+    /*   alterar de display none para block */
+    display: none; 
+    justify-content: space-between; 
+    padding-left: 25px;
+    padding-right: 25px;
+     transition: 2s;
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho em telas grandes */
+    height: auto;
+     
+    
+}
+
+
+
+.container-sheldon{
+    display: none;
+    flex-direction: row;
+    width: 35vw;
+    gap: 10px;
+    }
+.container-sheldon::after{
+    transform: translateY(20px); /* Move para baixo */
+    transition: 0.5s; 
+}
+
+.print-result{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#print-resultado{
+    color: #FF6600 ;
+    position: relative;
+    top: 10px;
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    
+    
+  
+}
+#print-temporizador{
+    text-align: center;
+    color: #FF6600;
+   
+    
+}
+span#temporizadorr{
+    font-size: 45px;
+    color: red;
+}
+#message-sheldon, #message-player{            
+      position: fixed;
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 10px;
+      max-width: 200px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            
+}
+
+#message-sheldon::after{
+    content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 34px;
+      border-width: 10px 5px 0;
+      border-style: solid;
+      border-color: #fff transparent;
+      display: block;
+      width: 0;
+}
+
+
+#message-player::after{ 
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 5px;
+      border-width: 10px 5px 0;
+      border-style: solid;
+      border-color: #fff transparent;
+      display: block;
+      width: 0;
+}
+
+#message-player{
+        left: 125px
+}
+#message-sheldon{
+        left: 145px;
+}
+
+p#score{
+    text-align: center;
+}
+#score-sheldon{
+    text-align: center;
+    color: #ffffff;
+}
+#score-player{
+    margin-left: 25px;
+    color: #ffffff;
+}
+
+.rules{
+    height: 67%;
+    position: fixed;
+    right: -855px;
+    top: 125px; 
+    display: none;
+    transition: right 2s ease, visibility 2s ease;
+    
+    
+}
+.rules::after{
+    transition: 2s;
+}
+.container-options{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    pointer-events: all;
+}
+
+.lets-play{
+    display: block;
+    margin: 55px auto;
+    margin-bottom: 5px;
+ 
+}
+
+.btn-game-rules{
+    border-radius: 25px;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    margin: 25px auto;
+    height: 45px;
+    width: 225px;
+    background-color: #FF6600;
+    color: #ffffff;
+}
+.btn-game-rules:hover{
+    opacity: 0.6;
+}
+
+img.img-options {
+    width: 65px;
+    
+} 
+/*   alterar de display none para block */
+.imgplaying{
+    display: none;
+    margin: auto 0;
+    
+}
+
+
+.img-player, .img-sheldon{
+    height: 55vh;
+    margin-top: 85px;
+    
+    
+}
+
+img.imgplayer:hover{
+    opacity: 0.6;
+    cursor: pointer;
+   
+    
+    
+}
+img.img-options:active{
+    opacity: 0.2;
+}
+
+img.imgsheldon{
+    opacity: 0.5;
+}
+@media (max-width: 800px) {
+    h1{
+    margin-bottom: 0px;
+    font-size: 1rem;
+    
+    }
+    .container-master{
+        flex-direction: column;
+    }
+    .container-player{
+        width: 100%;
+        height: 200px;
+        margin-left: 0;
+    }
+    .container-result{
+        width: 100%;
+        height: 20%;
+        padding: 15px;
+    }
+    .container-sheldon{
+        width: 100%;
+        height: 20%;
+    }
+    
+}

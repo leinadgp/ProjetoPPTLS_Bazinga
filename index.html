@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Importção do arquivo de css da pagina -->
+    <link rel="stylesheet" href="./assets/css/bkgFundo.css">
+     <!-- Importção do arquivo de css do bakcground -->
+    <title>Pedra Papel Tesoura Lagarto Spock</title>
+</head>
+<body class="btn-star-body" onclick="teste()" style="cursor: pointer;">
+<canvas id="molecules"></canvas>
+    <header>
+        <h1>PEDRA PAPEL TESOURA LAGARTO SPOCK</h1>
+    </header>
+    <nav class="btn-star">
+            <img  src="./images/imgSheldonStart.png" style=" height: 525px; margin-left: 80px;" alt="">
+    </nav>
+
+    <main class="container-master">
+        <section class="container-player">
+            <div class="container-img-score">
+                <p id="message-player">Eu já calculei suas três jogadas futuras. Você perdeu antes mesmo de começar.</p>
+                <img class="img-player" src="./images/player2-rock.png" alt="">
+                <p id="score-player">Pontuação <span id="scoreboard-player"> 0</span></p>
+            </div>
+            <div class="container-options">
+                <img class="img-options imgplayer" onclick="startGame('rock')" src="./images/rock.png" alt="Rock">
+                <img class="img-options imgplayer" onclick="startGame('papper')"  src="./images/papper.png" alt="papper">
+                <img class="img-options imgplayer" onclick="startGame('scissors')" src="./images/scissors.png" alt="scissors">
+                <img class="img-options imgplayer" onclick="startGame('lizard')" src="./images/lizard.png" alt="lizard">
+                <img class="img-options imgplayer" onclick="startGame('spock')" src="./images/spock.png" alt="spock">
+            </div>
+        </section>
+        <section class="container-result">
+           
+            <div class="print-result">
+                <button class="btn-game-rules">Regras do jogo</button>
+                <img class="lets-play" src="./images/letsplay.png" style="width:225px; margin-top: 25px;" alt="">
+                <p id="print-temporizador">ESCOLHA SUA OPÇÃO</p> 
+                <p id="print-resultado"></p>            
+            </div>
+           
+         <div> <img class="rules" src="./images/rules.jpg" alt=""></div>
+        </section>
+        <section class="container-sheldon">
+            <div class="container-options">
+                
+
+            </div>
+            <div class="container-img-score fala">
+                <p id="message-sheldon" >Esse jogo é 83% estratégia, 17% sorte. E eu sou 100% genial</p>
+                <img class="img-sheldon" src="./images/sheldon-rock.jpeg" alt="">
+                <p id="score" style="color: #fff;">Pontução sheldon : <span id="scoreboard-sheldon"> 0</span></p>
+            </div>
+        </section>
+       
+    </main>
+    
+</body>
+<script src="./assets/javaScript/scripts.js"></script>
+<script src="./assets/javaScript/bkgFundo.js"></script>
+
+</html>
