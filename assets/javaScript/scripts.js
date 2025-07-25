@@ -26,7 +26,7 @@ btnRules.addEventListener('click', function () {
 
     if (screenWidth <= 800) {
         hiddenRight = "-100%";   // Esconde completamente no mobile
-        visibleRight = "35%";     // Aparece com margem de 5% no mobile
+        visibleRight = "27%";     // Aparece com margem de 5% no mobile
     } else {
         hiddenRight = "-755px";  // Desktop valor
         visibleRight = "75px";   // Desktop valor

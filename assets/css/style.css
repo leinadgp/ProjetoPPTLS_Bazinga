@@ -1,22 +1,23 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    height: 100vh;
-    width: 100vw;
-
-    
+body {
+  height: 100vh;
+  width: 100vw;
 }
-h1{
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 35px;
-    color: #FF6600;
-    background-color: #000000;
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 35px;
+  color: #ff6600;
+  background-color: #000000;
 }
-
+.img-sheldon-start {
+  height: 525px;
+  margin-left: 80px;
+}
 
 .fade-in {
   opacity: 0;
@@ -29,252 +30,232 @@ h1{
   transform: translateY(0);
 }
 
-.container-master{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: 100vw;
-    gap: 35px;
-    
+.container-master {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100vw;
+  gap: 35px;
 }
 
-.container-player{
-    display: none;
-    flex-direction: row;
-    
-    margin-left: 25px;
-    gap: 30px;
-    transition: 2s;
-    
-}
-.container-result{
-    background-color: #000000;
+.container-player {
+  display: none;
+  flex-direction: row;
 
-    border-radius: 25px;
-    /*   alterar de display none para block */
-    display: none; 
-    justify-content: space-between; 
-    padding-left: 25px;
-    padding-right: 25px;
-     transition: 2s;
-    width: 100%;
-    max-width: 400px; /* Limita o tamanho em telas grandes */
-    height: auto;
-     
-    
+  margin-left: 25px;
+  gap: 30px;
+  transition: 2s;
+}
+.container-result {
+  background-color: #000000;
+
+  border-radius: 25px;
+  /*   alterar de display none para block */
+  display: none;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  transition: 2s;
+  width: 100%;
+  max-width: 400px; /* Limita o tamanho em telas grandes */
+  height: auto;
 }
 
-
-
-.container-sheldon{
-    display: none;
-    flex-direction: row;
-    width: 35vw;
-    gap: 10px;
-    }
-.container-sheldon::after{
-    transform: translateY(20px); /* Move para baixo */
-    transition: 0.5s; 
+.container-sheldon {
+  display: none;
+  flex-direction: row;
+  width: 35vw;
+  gap: 10px;
+}
+.container-sheldon::after {
+  transform: translateY(20px); /* Move para baixo */
+  transition: 0.5s;
 }
 
-.print-result{
-    display: flex;
-    flex-direction: column;
-    
-    
+.print-result {
+  display: flex;
+  flex-direction: column;
 }
 
-#print-resultado{
-    color: #FF6600 ;
-    position: relative;
-    top: 10px;
-    font-size: 26px;
-    font-weight: 400;
-    text-align: center;
-    
-    
-  
+#print-resultado {
+  color: #ff6600;
+  position: relative;
+  top: 10px;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
 }
-#print-temporizador{
-    text-align: center;
-    color: #FF6600;
-   
-    
+#print-temporizador {
+  text-align: center;
+  color: #ff6600;
 }
-span#temporizadorr{
-    font-size: 45px;
-    color: red;
+span#temporizadorr {
+  font-size: 45px;
+  color: red;
 }
-#message-sheldon, #message-player{            
-      position: fixed;
-      background: #fff;
-      border: 2px solid #333;
-      border-radius: 10px;
-      padding: 10px;
-      max-width: 200px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            
+#message-sheldon,
+#message-player {
+  position: fixed;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 200px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-#message-sheldon::after{
-    content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 34px;
-      border-width: 10px 5px 0;
-      border-style: solid;
-      border-color: #fff transparent;
-      display: block;
-      width: 0;
+#message-sheldon::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 34px;
+  border-width: 10px 5px 0;
+  border-style: solid;
+  border-color: #fff transparent;
+  display: block;
+  width: 0;
 }
 
-
-#message-player::after{ 
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 5px;
-      border-width: 10px 5px 0;
-      border-style: solid;
-      border-color: #fff transparent;
-      display: block;
-      width: 0;
+#message-player::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 5px;
+  border-width: 10px 5px 0;
+  border-style: solid;
+  border-color: #fff transparent;
+  display: block;
+  width: 0;
 }
 
-#message-player{
-        left: 125px
+#message-player {
+  left: 125px;
 }
-#message-sheldon{
-        left: 145px;
-}
-
-p#score{
-    text-align: center;
-}
-#score-sheldon{
-    text-align: center;
-    color: #ffffff;
-}
-#score-player{
-    margin-left: 25px;
-    color: #ffffff;
+#message-sheldon {
+  left: 145px;
 }
 
-.rules{
-    height: 67%;
-    position: fixed;
-    right: -855px;
-    top: 125px; 
-    display: none;
-    transition: right 2s ease, visibility 2s ease;
-    
-    
+p#score {
+  text-align: center;
 }
-.rules::after{
-    transition: 2s;
+#score-sheldon {
+  text-align: center;
+  color: #ffffff;
 }
-.container-options{
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    pointer-events: all;
+#score-player {
+  margin-left: 25px;
+  color: #ffffff;
 }
 
-.lets-play{
-    display: block;
-    margin: 55px auto;
-    margin-bottom: 5px;
- 
+.rules {
+  height: 100%;
+  position: fixed;
+  right: -855px;
+  top: 125px;
+  display: none;
+  transition: right 2s ease, visibility 2s ease;
+}
+.rules::after {
+  transition: 2s;
+}
+.container-options {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  pointer-events: all;
 }
 
-.btn-game-rules{
-    border-radius: 25px;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-    display: block;
-    margin: 25px auto;
-    height: 45px;
-    width: 225px;
-    background-color: #FF6600;
-    color: #ffffff;
+.lets-play {
+  display: block;
+  margin: 55px auto;
+  margin-bottom: 5px;
 }
-.btn-game-rules:hover{
-    opacity: 0.6;
+
+.btn-game-rules {
+  border-radius: 25px;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto;
+  height: 45px;
+  width: 225px;
+  background-color: #ff6600;
+  color: #ffffff;
+}
+.btn-game-rules:hover {
+  opacity: 0.6;
 }
 
 img.img-options {
-    width: 65px;
-    
-} 
+  width: 65px;
+}
 /*   alterar de display none para block */
-.imgplaying{
-    display: none;
-    margin: auto 0;
-    
+.imgplaying {
+  display: none;
+  margin: auto 0;
 }
 
-
-.img-player, .img-sheldon{
-    height: 55vh;
-    margin-top: 85px;
-    
-    
+.img-player,
+.img-sheldon {
+  height: 55vh;
+  margin-top: 85px;
 }
 
-img.imgplayer:hover{
-    opacity: 0.6;
-    cursor: pointer;
-   
-    
-    
+img.imgplayer:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
-img.img-options:active{
-    opacity: 0.2;
+img.img-options:active {
+  opacity: 0.2;
 }
 
-img.imgsheldon{
-    opacity: 0.5;
+img.imgsheldon {
+  opacity: 0.5;
 }
 
 @media (max-width: 800px) {
   h1 {
-    font-size: 1.2rem;
-    margin: 10px;
+    font-size: 1rem;
+    margin: 20px 0px 50px;
   }
-
+  .img-sheldon-start {
+    margin-top: 200px;
+    margin-left: 0px;
+  }
   .container-master {
     flex-direction: column;
     align-items: center;
     padding: 10px;
     gap: 0;
   }
-  .img-player, .img-sheldon{
+  .img-player,
+  .img-sheldon {
     margin-top: 0;
   }
-    .container-player{
-        width: 50%;
-        gap: 5px;
-        margin-left: 0;
-        flex-direction: column;
-        margin-bottom: 36px;
-
-    }
-    .container-options{
-        flex-direction: row;
-        height: 100%;
-    }
-    .container-result{
-        width: 100%;
-        height: 270px;
-        padding: 15px;
-    }
-    .container-sheldon{
-        width: 50%;
-        height: 200px;
-    }
+  .container-player {
+    width: 90%;
+    gap: 5px;
+    margin-left: 0;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+  .container-options {
+    flex-direction: row;
+    height: 100%;
+  }
+  .container-result {
+    width: 100%;
+    height: 270px;
+    padding: 15px;
+    margin-bottom: 45px;
+  }
+  .container-sheldon {
+    width: 20%;
+    height: 200px;
+  }
 
   .btn-game-rules {
     font-size: 16px;
@@ -282,10 +263,9 @@ img.imgsheldon{
     height: 35px;
     width: 160px;
   }
-  .rules{
+  .rules {
     top: 60px;
   }
-  
 
   .img-player,
   .img-sheldon {
@@ -295,9 +275,31 @@ img.imgsheldon{
   .lets-play {
     max-width: 0px;
   }
+#message-player{
+    width: 200px;
+    left: 80px;
+    top: -55px;
+}
 
-  .message-box {
-    font-size: 5px;
-    max-width: 100px;
-  }
+#message-player::after {
+  transform: rotate(30deg);
+  left: -5px;
+}
+
+#message-sheldon{
+    left: -85px;
+    bottom: 175px;
+    max-height: 90px;
+    width: 225px;
+}
+.testeSheldon{
+    margin-left: 66px;
+}
+#message-sheldon::after {
+  
+  left: 190px;
+  transform: rotate(-45deg);
+  bottom: -8px;
+  
+}
 }
