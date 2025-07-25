@@ -21,8 +21,19 @@ let containerRules = document.querySelector(".rules");
 let isVisible = false;
 
 btnRules.addEventListener('click', function () {
+    const screenWidth = window.innerWidth;
+    let hiddenRight, visibleRight;
+
+    if (screenWidth <= 800) {
+        hiddenRight = "-100%";   // Esconde completamente no mobile
+        visibleRight = "35%";     // Aparece com margem de 5% no mobile
+    } else {
+        hiddenRight = "-755px";  // Desktop valor
+        visibleRight = "75px";   // Desktop valor
+    }
+
     if (isVisible) {
-        containerRules.style.right = "-755px";
+        containerRules.style.right = hiddenRight;
         containerRules.style.visibility = "hidden";
         setTimeout(() => {
             containerRules.style.display = "none";
@@ -30,7 +41,7 @@ btnRules.addEventListener('click', function () {
     } else {
         containerRules.style.display = "block";
         setTimeout(() => {
-            containerRules.style.right = "75px";
+            containerRules.style.right = visibleRight;
             containerRules.style.visibility = "visible";
         }, 10);
     }
