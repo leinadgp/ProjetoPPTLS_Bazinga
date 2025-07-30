@@ -2,6 +2,7 @@
 
 Projeto desenvolvido como prática de lógica e interatividade com JavaScript, inspirado no clássico jogo Pedra Papel Tesoura, com as adições divertidas de Lagarto e Spock. O objetivo foi criar uma aplicação leve, responsiva e interativa, com foco em aprendizado e diversão.
 
+  ![Descrição da Imagem](PPTLS.png)
 
 ## 💼 Projeto Educacional
 
